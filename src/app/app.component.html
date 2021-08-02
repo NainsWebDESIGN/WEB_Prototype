@@ -2,9 +2,7 @@
   <header class="active" [class.sunSet]="sunset">
     <span class="LOGO" [class.sunSet]="sunset">LOGO</span>
     <div class="headerBtn">
-      <span [class.sunSet]="sunset">132</span>
-      <span [class.sunSet]="sunset">456</span>
-      <span [class.sunSet]="sunset">789</span>
+      <span *ngFor="let router of [132 , 456 , 789]" [class.sunSet]="sunset">{{router}}</span>
     </div>
   </header>
   <i class="fad fa-eclipse" [class.sunSet]="sunset" (click)='sunset = !sunset'></i>
