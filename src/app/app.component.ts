@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
+import { ShareService } from '@service/share.service';
 
 @Component({
   selector: 'app-root',
@@ -6,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  sunset: boolean = false;
-  constructor() { }
+  @HostListener('window:scroll', ['$event'])
+  SetWidth(_Event) { this.scrollHeight = _Event.srcElement.scrollingElement.scrollTop; }
+  scrollHeight: number;
+  testArr: any[] = [
+    { title: "影片", CHID: 1 },
+    { title: "分類", CHID: 2 },
+    { title: "女優", CHID: 3 }
+  ];
+  constructor(public share: ShareService) { }
   ngOnInit() {
   }
 }

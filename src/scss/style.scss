@@ -55,7 +55,8 @@ header {
     left: 50%;
     margin-left: -25%;
     top: 0;
-    span {
+    a {
+      text-decoration: none;
       cursor: pointer;
       margin-left: 27px;
       &:first-child {

@@ -1,9 +1,11 @@
-<section class="body" [class.sunSet]="sunset">
-  <header class="active" [class.sunSet]="sunset">
-    <span class="LOGO" [class.sunSet]="sunset">LOGO</span>
+<section class="body" [class.sunSet]="share.sunSet">
+  <header [ngClass]="{'sunSet': share.sunSet, 'active': scrollHeight > 0}">
+    <span class="LOGO" [class.sunSet]="share.sunSet">LOGO</span>
     <div class="headerBtn">
-      <span *ngFor="let router of [132 , 456 , 789]" [class.sunSet]="sunset">{{router}}</span>
+      <a *ngFor="let router of testArr" [class.sunSet]="share.sunSet"
+        [routerLink]="['/web', router.CHID]">{{router.title}}</a>
     </div>
   </header>
-  <i class="fad fa-eclipse" [class.sunSet]="sunset" (click)='sunset = !sunset'></i>
+  <i class="fad fa-eclipse" [class.sunSet]="share.sunSet" (click)='share.sunSet = !share.sunSet'></i>
+  <router-outlet></router-outlet>
 </section>
