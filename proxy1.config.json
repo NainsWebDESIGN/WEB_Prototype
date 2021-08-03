@@ -1,0 +1,7 @@
+{
+  "/v1": {
+    "target": "https://api.avgle.com/",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

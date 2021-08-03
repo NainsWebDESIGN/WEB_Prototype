@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { RoutingModule } from './app.routing';
 import { ShareService } from '@service/share.service';
 import { ApiService } from '@service/api.service';
+import { VideoPipe } from '@app/webBody/Video.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    WebBodyComponent
+    WebBodyComponent,
+    VideoPipe
   ],
   imports: [
     BrowserModule,

@@ -13,10 +13,11 @@ import 'rxjs/add/operator/map'
 export class WebBodyComponent implements OnInit {
   params: number;
   avgle = api['avgle'];
+  video: any[] = [];
   constructor(private acr: ActivatedRoute, public share: ShareService, private Api: ApiService) { }
   getApi(url) {
     let Observer = {
-      next: el => console.log(el, url),
+      next: el => { console.log(el, url); this.video = el.videos; },
       error: err => console.log(err)
     };
     this.Api.postApi(url).subscribe(Observer);
