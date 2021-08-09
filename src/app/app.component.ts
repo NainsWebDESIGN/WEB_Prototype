@@ -11,9 +11,9 @@ export class AppComponent implements OnInit {
   SetWidth(_Event) { this.scrollHeight = _Event.srcElement.scrollingElement.scrollTop; }
   scrollHeight: number;
   testArr: any[] = [
-    { title: "影片", CHID: 1 },
-    { title: "分類", CHID: 2 },
-    { title: "女優", CHID: 3 }
+    { title: "分類1", CHID: 1 },
+    { title: "分類2", CHID: 2 },
+    { title: "分類3", CHID: 3 }
   ];
   constructor(public share: ShareService) { }
   ngOnInit() {

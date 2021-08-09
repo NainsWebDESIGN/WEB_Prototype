@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map'
 export class ApiService {
     constructor(private http: HttpClient) { }
 
-    postApi(url) {
+    postAvgle(url) {
         return this.http.get(url).map((el: any) => el.response);
     }
 }
