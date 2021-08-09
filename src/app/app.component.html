@@ -6,6 +6,7 @@
         [routerLink]="['/web', router.CHID]">{{router.title}}</a>
     </div>
   </header>
+  <div class="hidetitle"></div>
   <i class="fad fa-eclipse" [class.sunSet]="share.sunSet" (click)='share.sunSet = !share.sunSet'></i>
   <router-outlet></router-outlet>
 </section>
