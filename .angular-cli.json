@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "Nuanuan-web"
+    "name": "WEB_Prototype"
   },
   "apps": [
     {
       "root": "src",
-      "outDir": "dist",
+      "outDir": "WEB_Prototype",
       "assets": ["assets", "favicon.ico", "scss"],
       "index": "index.html",
       "main": "main.ts",
